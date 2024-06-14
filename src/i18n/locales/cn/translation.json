@@ -5,8 +5,8 @@
     "projects": "项目"
   },
   "intro": {
-    "title": "👋 你好，我是Harrie",
-    "description": "一个全栈的Web开发者，主要专注于Node.js、Vue、React等技术",
+    "title": "👋 你好，我是VisualCodeChat",
+    "description": "Your personal programming tutor.",
     "link": "开始阅读"
   },
   "dateFormat": "yyyy / MM / dd",
