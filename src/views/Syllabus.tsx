@@ -6,7 +6,7 @@ const Title = tw.h2`text-2xl text-slate-700`;
 
 const List = tw.h3`text-xl font-bold text-slate-700 mt-6`;
 
-const SectionTitle = tw.div`text-lg text-slate-700 mt-6`;
+const SectionTitle = tw.div`text-lg font-bold text-slate-700 mt-6`;
 
 const Content = tw.p`text-base text-slate-600 ml-4`;
 
@@ -26,6 +26,11 @@ export default function Syllabus(){
             <SectionTitle>•	Lab Activities:</SectionTitle>
                 <Content>o	Writing and running simple arithmetic programs</Content>
                 <Content>o	Practice problems on variables, data types, and control structures</Content>
+            <SectionTitle>•	Assignments:</SectionTitle>
+                <Content>o	Write a script to check if a number is prime</Content>
+
+
+
 
         </Wrapper>
 
