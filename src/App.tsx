@@ -6,6 +6,8 @@ import Articles from './views/Articles';
 import Home from './views/Home';
 import Main from './views/Main';
 import Projects from './views/Projects';
+import Syllabus from './views/Syllabus';
+
 
 const milestones = {
   posts: Number(import.meta.env.VITE_GITHUB_MILESTONE_POSTS),
@@ -18,6 +20,13 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Main />}>
           <Route path="" element={<Home />} />
+
+          <Route path="syllabus" element={<Outlet />}>
+            {/* <Route path="" element={<>aaaaaaa</>} /> */}
+            <Route path="" element={<Syllabus/>} />
+            <Route path=":id" element={<Article />} />
+          </Route>
+          
           <Route path="posts" element={<Outlet />}>
             <Route path="" element={<Articles milestone={milestones.posts} />} />
             <Route path=":id" element={<Article />} />

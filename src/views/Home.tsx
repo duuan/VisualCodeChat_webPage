@@ -45,6 +45,16 @@ export default function Home() {
             <IconArrowRight />
           </LinkButton>
         </Link>
+
+        <br/>
+{/* 加一个按钮，链接到教学大纲 */}
+        <Link to="/syllabus">    
+          <LinkButton>
+            <span>{t('Syllabus')}</span>
+            <IconArrowRight />
+          </LinkButton>
+        </Link>
+
       </Center>
     </Wrapper>
   );

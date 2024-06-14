@@ -126,7 +126,9 @@ export default function Main() {
           </HeaderCenter>
         </Header>
 
+        {/* <>大纲啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</> */}
         <Outlet />
+
 
         <Footer>
           <FooterCenter>
