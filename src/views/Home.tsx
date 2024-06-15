@@ -5,6 +5,9 @@ import tw from 'twin.macro';
 import IconArrowRight from '~icons/ri/arrow-right-line';
 
 import ShapeEffect from '../components/ShapeEffect/ShapeEffect';
+import ErickImage from '../Photo_Erick.png';
+import raImage1 from '../IMG_0066.jpg';
+import raImage2 from '../IMG_0066.jpg';
 
 const Background = tw.div`absolute [z-index:0] top-0 left-0 w-full h-full [user-select:none] pointer-events-none opacity-50 blur-sm`;
 
@@ -25,6 +28,28 @@ const LinkButton = tw.button`
   rounded-full outline-none transition-all
 `;
 
+const avatarContainerStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  marginTop: '16px', // 可以根据需要调整间距
+};
+const avatarImageStyle = {
+  width: '50px', // 头像的宽度
+  height: '50px', // 头像的高度
+  borderRadius: '50%', // 使图片变成圆形
+  marginRight: '8px', // 头像和名字之间的间距
+};
+const avatarNameStyle = {
+  fontSize: '16px', // 名字的字体大小
+  fontWeight: 'bold', // 名字的字体粗细
+};
+const avatarDescriptionStyle = {
+  fontSize: '12px', // 描述的字体大小
+  color: 'gray', // 描述的字体颜色
+
+};
+
+
 export default function Home() {
   const { t } = useTranslation();
 
@@ -39,12 +64,12 @@ export default function Home() {
       <Center>
         <Title>{t('intro.title')}</Title>
         <Description>{t('intro.description')}</Description>
-        <Link to="/posts">
+        {/* <Link to="/posts">
           <LinkButton>
             <span>{t('intro.link')}</span>
             <IconArrowRight />
           </LinkButton>
-        </Link>
+        </Link> */}
 
         <br/>
 {/* 加一个按钮，链接到教学大纲 */}
@@ -54,6 +79,26 @@ export default function Home() {
             <IconArrowRight />
           </LinkButton>
         </Link>
+
+
+        <div style={avatarContainerStyle}>
+          <img src={ErickImage} alt="Avatar" style={avatarImageStyle} />
+          <span style={avatarNameStyle}>{t('陈立科')}</span>
+          <span style={avatarDescriptionStyle}>{t('西交利物浦大学智能工程学院讲师')}</span>
+        </div>
+
+        <div style={avatarContainerStyle}>
+          <img src={raImage1} alt="Avatar" style={avatarImageStyle} />
+          <span style={avatarNameStyle}>{t('王端')}</span>
+          <span style={avatarDescriptionStyle}>{t('研究助理')}</span>
+        </div>
+
+        <div style={avatarContainerStyle}>
+          <img src={raImage2} alt="Avatar" style={avatarImageStyle} />
+          <span style={avatarNameStyle}>{t('李明远')}</span>
+          <span style={avatarDescriptionStyle}>{t('研究助理')}</span>
+        </div>
+
 
       </Center>
     </Wrapper>
