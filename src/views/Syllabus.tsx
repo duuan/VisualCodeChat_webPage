@@ -61,7 +61,8 @@ export default function Syllabus(){
                 <SectionTitle>• 讲座主题：</SectionTitle>
                     <Content>o 排序算法介绍</Content>
                     <Content>o 冒泡排序 (Bubble Sort)：概念和实现 </Content>
-                    <Content>o 插入排序 (Insertion Sort)：概念和实现 </Content>
+                    {/* <Content>o 插入排序 (Insertion Sort)：概念和实现 </Content> */}
+                    <Content><a href="#/posts/1">o 插入排序 (Insertion Sort)：概念和实现 </a></Content>
 
                 <SectionTitle>• 实验活动：</SectionTitle>
                     <Content>o 实现冒泡排序</Content>

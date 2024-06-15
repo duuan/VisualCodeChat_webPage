@@ -55,12 +55,16 @@ export default function Home() {
 
   return (
     <Wrapper>
+
+      {/* 首页动画
       <Background>
         <ShapeEffect count={12} sizes={[30, 60]} />
       </Background>
+
+      首页动画
       <Foreground>
         <ShapeEffect count={12} sizes={[40, 80]} />
-      </Foreground>
+      </Foreground> */}
       <Center>
         <Title>{t('intro.title')}</Title>
         <Description>{t('intro.description')}</Description>
@@ -90,13 +94,13 @@ export default function Home() {
         <div style={avatarContainerStyle}>
           <img src={raImage1} alt="Avatar" style={avatarImageStyle} />
           <span style={avatarNameStyle}>{t('王端')}</span>
-          <span style={avatarDescriptionStyle}>{t('研究助理')}</span>
+          <span style={avatarDescriptionStyle}>{t('助教')}</span>
         </div>
 
         <div style={avatarContainerStyle}>
           <img src={raImage2} alt="Avatar" style={avatarImageStyle} />
           <span style={avatarNameStyle}>{t('李明远')}</span>
-          <span style={avatarDescriptionStyle}>{t('研究助理')}</span>
+          <span style={avatarDescriptionStyle}>{t('助教')}</span>
         </div>
 
 

@@ -5,8 +5,8 @@
     "projects": "项目"
   },
   "intro": {
-    "title": "👋 你好，我是VisualCodeChat",
-    "description": "Your personal programming tutor.",
+    "title": "👋 基于AI聊天机器人的编程导论",
+    "description": "----AI辅助学习编程",
     "link": "开始阅读"
   },
   "dateFormat": "yyyy / MM / dd",
