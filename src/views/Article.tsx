@@ -155,8 +155,12 @@ export default memo(function Article() {
       </article>
 
       <section tw="mt-8">
+        {/* 隐藏评论框
         <CommentTitle>{t('comment.title')}</CommentTitle>
-        <CommentButton href={newCommentUrl}>{t('comment.btn')}</CommentButton>
+        <CommentButton href={newCommentUrl}>{t('comment.btn')}</CommentButton> */}
+
+      {/* 嵌入chatbot */}
+      <iframe src="https://www.vizai.site/#/new-chat?mask=100001" width="1000" height="800"></iframe>
 
         {commentsLoading && (
           <div>
