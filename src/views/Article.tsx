@@ -17,6 +17,7 @@ import ArticleModel from '../models/ArticleModel';
 import CommentModel from '../models/CommentModel';
 import github from '../services/github';
 import { createQueryURL } from '../utils';
+import headerImage from '../background.jpg';
 
 const Wrapper = tw.article`mx-auto w-full max-w-screen-lg px-8 py-12`;
 
@@ -36,6 +37,8 @@ const CommentButton = tw.a`
 `;
 
 const Foot = tw.div`mt-8 flex justify-center`;
+const HeaderTitle = tw.h2`text-5xl text-white font-bold leading-10 text-center absolute top-[400px] w-full`;
+const HeaderDescription = tw.p`mt-6 text-3xl text-white text-center absolute top-[450px] w-full`;
 
 function useArticle() {
   const { id } = useParams();
@@ -113,6 +116,14 @@ export default memo(function Article() {
   }, []);
 
   return (
+<div>
+    <div>
+      <img src={headerImage} width="100%" height="auto"/>
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <HeaderTitle>{t('intro.title')}</HeaderTitle>
+          <HeaderDescription>{t('intro.description')}</HeaderDescription>
+      </div>
+    </div>
     <Wrapper>
       <article>
         {articleLoading && (
@@ -136,6 +147,7 @@ export default memo(function Article() {
 
         {article && (
           <>
+
             <Title>{article.title}</Title>
             <Into>
               <span>{createdAt}</span>
@@ -188,5 +200,6 @@ export default memo(function Article() {
         </Foot>
       </section>
     </Wrapper>
+</div>
   );
 });

@@ -6,8 +6,9 @@ import IconArrowRight from '~icons/ri/arrow-right-line';
 
 import ShapeEffect from '../components/ShapeEffect/ShapeEffect';
 import ErickImage from '../Photo_Erick.png';
-import raImage1 from '../IMG_0066.jpg';
-import raImage2 from '../IMG_0066.jpg';
+import raImage1 from '../Photo_duan.png';
+import raImage2 from '../Photo_mingyuan.png';
+import backgroundImage from '../background.jpg';
 
 const Background = tw.div`absolute [z-index:0] top-0 left-0 w-full h-full [user-select:none] pointer-events-none opacity-50 blur-sm`;
 
@@ -17,9 +18,10 @@ const Wrapper = tw.main`px-8 py-20 w-full flex-1 flex flex-col justify-center`;
 
 const Center = tw.div`relative [z-index:1] mx-auto max-w-screen-lg text-center`;
 
-const Title = tw.h2`text-5xl text-slate-600 font-bold leading-10`;
+// const Title = tw.h2`text-5xl text-white-600 font-bold leading-10`;
+const Title = tw.h2`text-5xl text-white font-bold leading-10`;
 
-const Description = tw.p`mt-6 text-3xl text-slate-400`;
+const Description = tw.p`mt-6 text-3xl text-white`;
 
 const LinkButton = tw.button`
   mt-12 py-3 px-6 inline-flex items-center
@@ -42,11 +44,23 @@ const avatarImageStyle = {
 const avatarNameStyle = {
   fontSize: '16px', // 名字的字体大小
   fontWeight: 'bold', // 名字的字体粗细
+  color: 'white',
 };
 const avatarDescriptionStyle = {
   fontSize: '12px', // 描述的字体大小
-  color: 'gray', // 描述的字体颜色
-
+  color: 'white', // 描述的字体颜色
+  textIndent: '10px',
+};
+const pageBackgroundStyle = {
+  backgroundImage: `url(${backgroundImage})`,
+  backgroundSize: 'cover', // 让图片覆盖整个背景
+  backgroundPosition: 'center', // 居中背景图片
+  backgroundRepeat: 'no-repeat', // 防止背景图片重复
+  height: '100vh', // 让背景覆盖整个视口高度
+  width: '100%', // 让背景覆盖整个视口宽度
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 };
 
 
@@ -54,6 +68,8 @@ export default function Home() {
   const { t } = useTranslation();
 
   return (
+
+    <div style={pageBackgroundStyle}>
     <Wrapper>
 
       {/* 首页动画
@@ -93,8 +109,8 @@ export default function Home() {
 
         <div style={avatarContainerStyle}>
           <img src={raImage1} alt="Avatar" style={avatarImageStyle} />
-          <span style={avatarNameStyle}>{t('王端')}</span>
-          <span style={avatarDescriptionStyle}>{t('助教')}</span>
+          <p style={avatarNameStyle}>{t('王端')}</p>
+          <p style={avatarDescriptionStyle}>{t('助教')}</p>
         </div>
 
         <div style={avatarContainerStyle}>
@@ -106,5 +122,6 @@ export default function Home() {
 
       </Center>
     </Wrapper>
+    </div>
   );
 }

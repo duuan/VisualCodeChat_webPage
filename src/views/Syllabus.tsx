@@ -1,7 +1,11 @@
 
 import tw from 'twin.macro';
+import headerImage from '../background.jpg';
+import { useTranslation } from 'react-i18next';
+
 
 const Wrapper = tw.main`mx-auto w-full max-w-screen-lg px-8 py-12`;
+
 const Title = tw.h2`text-2xl text-slate-700`;
 
 const List = tw.h3`text-xl font-bold text-slate-700 mt-6`;
@@ -9,13 +13,33 @@ const List = tw.h3`text-xl font-bold text-slate-700 mt-6`;
 const SectionTitle = tw.div`text-lg font-bold text-slate-700 mt-6`;
 
 //const Content = tw.p`text-base text-slate-600 ml-4`;
-const Content = tw.p`text-base text-slate-600 ml-4 hover:underline cursor-pointer`;
+// const Content = tw.p`text-base text-slate-600 ml-4 hover:underline cursor-pointer`;
+const Content = tw.p`text-base text-slate-600 ml-4 underline cursor-pointer`;
+
+const HeaderTitle = tw.h2`text-5xl text-white font-bold leading-10 text-center absolute top-[400px] w-full`;
+const HeaderDescription = tw.p`mt-6 text-3xl text-white text-center absolute top-[450px] w-full`;
+
 
 
 export default function Syllabus(){
-    
+    const { t } = useTranslation();
+
     return(
+        // <>
+        // <TopImage style={{ backgroundImage: `url(${headerImage})` }}></TopImage>
+        <div>
+            <div>
+                <img src={headerImage} width="100%" height="auto"/>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <HeaderTitle>{t('intro.title')}</HeaderTitle>
+                    <HeaderDescription>{t('intro.description')}</HeaderDescription>
+                </div>
+            </div>
+
         <Wrapper>
+
+        
+
             <Title>人工智能聊天机器人编程入门课程大纲</Title>
             <List>第1周：编程语言入门 </List>
                 <SectionTitle>•	讲座主题：</SectionTitle>
@@ -128,6 +152,7 @@ export default function Syllabus(){
                     <Content>o 编写一个程序，在图上执行DFS</Content>
                     <Content>o 编写一个程序，找到图中所有的连通分量</Content>
         </Wrapper>
+        </div>
 
     )
 

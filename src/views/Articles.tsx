@@ -95,6 +95,7 @@ export default function Articles(props: ArticlesProps) {
   );
 
   return (
+
     <Wrapper>
       <Skeleton tw="h-8 w-24">
         <Title>{title}</Title>
