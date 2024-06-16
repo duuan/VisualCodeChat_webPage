@@ -8,7 +8,8 @@ const List = tw.h3`text-xl font-bold text-slate-700 mt-6`;
 
 const SectionTitle = tw.div`text-lg font-bold text-slate-700 mt-6`;
 
-const Content = tw.p`text-base text-slate-600 ml-4`;
+//const Content = tw.p`text-base text-slate-600 ml-4`;
+const Content = tw.p`text-base text-slate-600 ml-4 hover:underline cursor-pointer`;
 
 
 export default function Syllabus(){
