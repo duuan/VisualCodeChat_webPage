@@ -2,6 +2,7 @@
 import tw from 'twin.macro';
 import headerImage from '../background.jpg';
 import { useTranslation } from 'react-i18next';
+import './styles.css';
 
 
 const Wrapper = tw.main`mx-auto w-full max-w-screen-lg px-8 py-12`;
@@ -16,9 +17,10 @@ const SectionTitle = tw.div`text-lg font-bold text-slate-700 mt-6`;
 // const Content = tw.p`text-base text-slate-600 ml-4 hover:underline cursor-pointer`;
 const Content = tw.p`text-base text-slate-600 ml-4 underline cursor-pointer`;
 
-const HeaderTitle = tw.h2`text-5xl text-white font-bold leading-10 text-center absolute top-[400px] w-full`;
-const HeaderDescription = tw.p`mt-6 text-3xl text-white text-center absolute top-[450px] w-full`;
-
+// const HeaderTitle = tw.h2`text-5xl text-white font-bold leading-10 text-center absolute top-[400px] w-full`;
+// const HeaderDescription = tw.p`mt-6 text-3xl text-white text-center absolute top-[450px] w-full`;
+const HeaderTitle = tw.h2`text-5xl text-white font-bold leading-10 text-center whitespace-nowrap`;
+const HeaderDescription = tw.p`mt-6 text-3xl text-white text-center`;
 
 
 export default function Syllabus(){
@@ -28,9 +30,9 @@ export default function Syllabus(){
         // <>
         // <TopImage style={{ backgroundImage: `url(${headerImage})` }}></TopImage>
         <div>
-            <div>
+            <div className="headerContainer">
                 <img src={headerImage} width="100%" height="auto"/>
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <div className="headerContent">
                     <HeaderTitle>{t('intro.title')}</HeaderTitle>
                     <HeaderDescription>{t('intro.description')}</HeaderDescription>
                 </div>
