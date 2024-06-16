@@ -160,7 +160,7 @@ export default memo(function Article() {
         <CommentButton href={newCommentUrl}>{t('comment.btn')}</CommentButton> */}
 
       {/* 嵌入chatbot */}
-      <iframe src="https://www.vizai.site/#/new-chat?mask=100001" width="1000" height="800"></iframe>
+      <iframe src="https://www.vizai.site/#/new-chat?mask=100002" width="1000" height="800"></iframe>
 
         {commentsLoading && (
           <div>
