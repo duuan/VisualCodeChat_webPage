@@ -3,6 +3,7 @@ import tw from 'twin.macro';
 import headerImage from '../background.jpg';
 import { useTranslation } from 'react-i18next';
 import './styles.css';
+import ShapeEffect from '../components/ShapeEffect/ShapeEffect';
 
 
 const Wrapper = tw.main`mx-auto w-full max-w-screen-lg px-8 py-12`;
@@ -21,6 +22,8 @@ const Content = tw.p`text-base text-slate-600 ml-4 underline cursor-pointer`;
 // const HeaderDescription = tw.p`mt-6 text-3xl text-white text-center absolute top-[450px] w-full`;
 const HeaderTitle = tw.h2`text-5xl text-white font-bold leading-10 text-center whitespace-nowrap`;
 const HeaderDescription = tw.p`mt-6 text-3xl text-white text-center`;
+const Background = tw.div`absolute [z-index:0] top-0 left-0 w-full h-full [user-select:none] pointer-events-none opacity-50 blur-sm`;
+
 
 
 export default function Syllabus(){
@@ -40,7 +43,9 @@ export default function Syllabus(){
 
         <Wrapper>
 
-        
+        <Background>
+        <ShapeEffect count={12} sizes={[30, 60]} />
+      </Background>
 
             <Title>人工智能聊天机器人编程入门课程大纲</Title>
             <List>第1周：编程语言入门 </List>
