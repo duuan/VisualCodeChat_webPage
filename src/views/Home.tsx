@@ -95,7 +95,7 @@ export default function Home() {
 {/* 加一个按钮，链接到教学大纲 */}
         <Link to="/syllabus">    
           <LinkButton>
-            <span>{t('Syllabus')}</span>
+            <span>{t('课程大纲')}</span>
             <IconArrowRight />
           </LinkButton>
         </Link>
